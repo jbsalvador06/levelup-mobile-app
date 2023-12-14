@@ -1,13 +1,21 @@
-import { Button, Text } from "react-native";
+import {  } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = ({navigation}) => {
     return (
-        <SafeAreaView>
+        <View style={styles.container}>
             <Text>Home Screen</Text>
             <Button title="Go to Details" onPress={() => navigation.navigate('Details')}/>
-        </SafeAreaView>
+        </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#F8BDEB',
+        height: '100%',
+    }
+})
 
 export default HomeScreen;
