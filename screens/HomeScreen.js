@@ -38,7 +38,6 @@ const HomeScreen = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
             </View>
-            {/* <Button title="Go to Details" onPress={() => navigation.navigate('Details')}/> */}
         </View>
     );
 }

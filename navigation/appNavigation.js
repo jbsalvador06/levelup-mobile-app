@@ -13,7 +13,7 @@ const AppNavigation = () => {
     return (
         <NavigationContainer>
             <HUD />
-            <Stack.Navigator initialRouteName="Home">
+            <Stack.Navigator initialRouteName="Home" screenOptions={{ animation: 'slide_from_right' }}>
                 <Stack.Screen
                     name="Home"
                     options={{ headerShown: false }}
