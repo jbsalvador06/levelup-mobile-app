@@ -5,7 +5,7 @@ import HUD from "../components/HUD";
 
 // Screens
 import HomeScreen from "../screens/HomeScreen";
-import DetailsScreen from "../screens/DetailsScreen";
+import NotesScreen from "../screens/NotesScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,9 +20,9 @@ const AppNavigation = () => {
                     component={HomeScreen}
                 />
                 <Stack.Screen
-                    name="Details"
+                    name="Notes"
                     options={{ headerShown: false }}
-                    component={DetailsScreen}
+                    component={NotesScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>
