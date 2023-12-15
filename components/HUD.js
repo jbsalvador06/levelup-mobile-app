@@ -12,7 +12,9 @@ const HUD = () => {
                     <Text style={{ fontSize: 18, fontWeight: 'bold'}}>TheJeddi</Text>
                 </View>
                 <View>
-                    <View style={styles.progressBar}></View>
+                    <View style={styles.progressBar}>
+                        <View style={styles.progressBarFill}></View>
+                    </View>
                 </View>
             </View>
         </SafeAreaView>
@@ -24,7 +26,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#FBECB2',
         width: '100%',
-        height: '20%',
+        height: '15%',
         padding: 10,
         justifyContent: "flex-start",
         borderBottomWidth: 1,
@@ -53,6 +55,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#F4C524',
         height: 20,
         width: 260,
+    },
+    progressBarFill: {
+        backgroundColor: '#85FF98',
+        width: '80%',
+        height: '100%',
+        borderRightWidth: 1
     }
 });
 
