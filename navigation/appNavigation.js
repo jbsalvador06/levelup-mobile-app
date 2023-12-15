@@ -8,6 +8,7 @@ import HomeScreen from "../screens/HomeScreen";
 import NotesScreen from "../screens/NotesScreen";
 import ToDoScreen from "../screens/ToDoScreen";
 import GoalsScreen from "../screens/GoalsScreen";
+import FlashCardScreen from "../screens/FlashCardScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,11 @@ const AppNavigation = () => {
                     name="Goals"
                     options={{ headerShown: false }}
                     component={GoalsScreen}
+                />
+                <Stack.Screen
+                    name="Flash Card"
+                    options={{ headerShown: false }}
+                    component={FlashCardScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>

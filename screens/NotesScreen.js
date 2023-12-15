@@ -1,7 +1,6 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Clock from "../components/Clock";
 import Notes from "../components/Notes";
-import { ScrollView } from "react-native";
 
 const NotesScreen = ({ navigation }) => {
     return (

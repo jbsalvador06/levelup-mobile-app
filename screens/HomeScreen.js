@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
             <View style={styles.bigTaskContainer}>
-                <TouchableOpacity style={styles.bigTaskButton}>
+                <TouchableOpacity style={styles.bigTaskButton} onPress={() => navigation.navigate('Flash Card')}>
                     <Text>Flash Card</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.bigTaskButton}>
