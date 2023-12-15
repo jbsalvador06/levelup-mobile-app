@@ -5,7 +5,7 @@ const HUD = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.profileContainer}>
-                <Image source={require('../assets/me.png')} style={styles.profileIcon}/>
+                <Image source={require('../assets/me-portrait-6.png')} style={styles.profileIcon}/>
             </View>
             <View style={styles.innerProfileContainer}>
                 <View>
