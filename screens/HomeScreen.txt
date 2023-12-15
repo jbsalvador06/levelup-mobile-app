@@ -1,0 +1,33 @@
+<View style={styles.taskContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate('Notes')}>
+                    <View style={styles.taskButton}>
+                        <Text>Notes</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('ToDo')}>
+                    <View style={styles.taskButton}>
+                        <Text>To Do</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <View style={styles.taskButton}>
+                        <Text>Goals</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.bigTaskContainer}>
+                {/* Flash Card */}
+                <TouchableOpacity>
+                    <View style={styles.bigTaskButton}>
+                        <Text>Flash Card</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.bigTaskContainer}>
+                {/* Study Tips */}
+                <TouchableOpacity>
+                    <View style={styles.bigTaskButton}>
+                        <Text>Study Tips</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>

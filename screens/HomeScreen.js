@@ -6,36 +6,22 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.container}>
             <Clock />
             <View style={styles.taskContainer}>
-                <TouchableOpacity onPress={() => navigation.navigate('Notes')}>
-                    <View style={styles.taskButton}>
-                        <Text>Notes</Text>
-                    </View>
+                <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('Notes')}>
+                    <Text>Notes</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <View style={styles.taskButton}>
-                        <Text>To Do</Text>
-                    </View>
+                <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('ToDo')}>
+                    <Text>To Do</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <View style={styles.taskButton}>
-                        <Text>Goals</Text>
-                    </View>
+                <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('Goals')}>
+                    <Text>Goals</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.bigTaskContainer}>
-                {/* Flash Card */}
-                <TouchableOpacity>
-                    <View style={styles.bigTaskButton}>
-                        <Text>Flash Card</Text>
-                    </View>
+                <TouchableOpacity style={styles.bigTaskButton}>
+                    <Text>Flash Card</Text>
                 </TouchableOpacity>
-            </View>
-            <View style={styles.bigTaskContainer}>
-                {/* Study Tips */}
-                <TouchableOpacity>
-                    <View style={styles.bigTaskButton}>
-                        <Text>Study Tips</Text>
-                    </View>
+                <TouchableOpacity style={styles.bigTaskButton}>
+                    <Text>Study Tips</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -66,15 +52,19 @@ const styles = StyleSheet.create({
     },
     bigTaskContainer: {
         width: '80%',
+        height: '100%',
+        justifyContent: 'center',
+        marginBottom: 20,
+        flex: 1
     },
     bigTaskButton: {
         backgroundColor: '#F4C524',
-        marginBottom: 20,
+        marginBottom: 10,
         borderWidth: 1,
         borderRadius: 4,
+        height: '45%',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 150
     }
 })
 

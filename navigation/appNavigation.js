@@ -6,6 +6,8 @@ import HUD from "../components/HUD";
 // Screens
 import HomeScreen from "../screens/HomeScreen";
 import NotesScreen from "../screens/NotesScreen";
+import ToDoScreen from "../screens/ToDoScreen";
+import GoalsScreen from "../screens/GoalsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +25,16 @@ const AppNavigation = () => {
                     name="Notes"
                     options={{ headerShown: false }}
                     component={NotesScreen}
+                />
+                <Stack.Screen
+                    name="ToDo"
+                    options={{ headerShown: false }}
+                    component={ToDoScreen}
+                />
+                <Stack.Screen
+                    name="Goals"
+                    options={{ headerShown: false }}
+                    component={GoalsScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>

@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     notesNavContainer: {
         flexDirection: 'row',
-        justifyContent: "space-between",
+        justifyContent: 'space-between',
         padding: 10,
         borderBottomWidth: 1,
     },
