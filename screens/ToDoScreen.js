@@ -8,7 +8,7 @@ import ToDo from "../components/ToDo";
 const ToDoScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Clock />
+            <Clock onPress={() => navigation.navigate('Clock')}/>
             <View style={styles.todoContainer}>
                 <View style={styles.todoNavContainer}>
                     <Text>To Do</Text>

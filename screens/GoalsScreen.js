@@ -7,7 +7,7 @@ import Goals from "../components/Goals";
 const GoalsScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Clock />
+            <Clock onPress={() => navigation.navigate('Clock')}/>
             <View style={styles.goalsContainer}>
                 <View style={styles.goalsNavContainer}>
                     <Text>Goals</Text>

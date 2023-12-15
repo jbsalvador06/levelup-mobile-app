@@ -5,7 +5,7 @@ import Notes from "../components/Notes";
 const NotesScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Clock />
+            <Clock onPress={() => navigation.navigate('Clock')}/>
             <View style={styles.notesContainer}>
                 <View style={styles.notesNavContainer}>
                     <Text>Notes</Text>

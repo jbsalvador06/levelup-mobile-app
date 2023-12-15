@@ -1,28 +1,29 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Clock from "../components/Clock";
-import FlashCards from "../components/FlashCards";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
-const FlashCardScreen = ({ navigation }) => {
+// Components
+import Clock from "../components/Clock";
+import StudyTips from "../components/StudyTips";
+
+const StudyTipsScreen = ({ navigation }) => {
     return (
         <View style={styles.constainer}>
-            <Clock onPress={() => navigation.navigate('Clock')}/>
-            <View style={styles.flashCardContainer}>
-                <View style={styles.flashCardNavContainer}>
-                    <Text>Flash Cards</Text>
+            <Clock />
+            <View style={styles.tipsContainer}>
+                <View style={styles.tipsNavContainer}>
+                    <Text>Study Tips</Text>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Text>Close</Text>
                     </TouchableOpacity>
                 </View>
-                <ScrollView style={styles.insideFlashCardContainer}>
-                    <FlashCards header={'Flash Card #1'} text={'Random fact'}/>
-                    <FlashCards header={'Flash Card #2'} text={'Random fact'}/>
-                    <FlashCards header={'Flash Card #3'} text={'Random fact'}/>
-                    <FlashCards header={'Flash Card #4'} text={'Random fact'}/>
+                <ScrollView style={styles.insideTipsContainer}>
+                    <StudyTips header={'Tip #1'} text={'This is a tip'} />
+                    <StudyTips header={'Tip #2'} text={'This is a tip'} />
+                    <StudyTips header={'Tip #3'} text={'This is a tip'} />
                 </ScrollView>
             </View>
         </View>
     )
-};
+}
 
 const styles = StyleSheet.create({
     constainer: {
@@ -32,20 +33,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    flashCardContainer: {
+    tipsContainer: {
         backgroundColor: '#FBECB2',
         height: '65%',
         width: '95%',
         borderWidth: 1,
         flex: 1
     },
-    flashCardNavContainer: {
+    tipsNavContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: 10,
         borderBottomWidth: 1,
     },
-    insideFlashCardContainer: {
+    insideTipsContainer: {
         height: '50%',
         width: '100%',
         padding: 15,
@@ -54,4 +55,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default FlashCardScreen;
+export default StudyTipsScreen;

@@ -4,7 +4,7 @@ import Clock from "../components/Clock";
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Clock />
+            <Clock onPress={() => navigation.navigate('Clock')}/>
             <View style={styles.taskContainer}>
                 <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('Notes')}>
                     <Text>Notes</Text>
@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
                 <TouchableOpacity style={styles.bigTaskButton} onPress={() => navigation.navigate('Flash Card')}>
                     <Text>Flash Card</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.bigTaskButton}>
+                <TouchableOpacity style={styles.bigTaskButton} onPress={() => navigation.navigate('Study Tips')}>
                     <Text>Study Tips</Text>
                 </TouchableOpacity>
             </View>

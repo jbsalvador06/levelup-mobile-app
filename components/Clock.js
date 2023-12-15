@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const Clock = () => {
+const Clock = ({ onPress }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>11:30</Text>
+            <TouchableOpacity onPress={onPress}>
+                <Text style={styles.text}>11:30</Text>
+            </TouchableOpacity>
         </View>
     )
 }
