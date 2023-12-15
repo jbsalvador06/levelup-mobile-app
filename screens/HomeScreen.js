@@ -1,4 +1,6 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPen, faList, faBullseye } from "@fortawesome/free-solid-svg-icons"
 import Clock from "../components/Clock";
 
 const HomeScreen = ({ navigation }) => {
@@ -7,21 +9,21 @@ const HomeScreen = ({ navigation }) => {
             <Clock onPress={() => navigation.navigate('Clock')}/>
             <View style={styles.taskContainer}>
                 <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('Notes')}>
-                    <Text>Notes</Text>
+                    <FontAwesomeIcon icon={faPen} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('ToDo')}>
-                    <Text>To Do</Text>
+                    <FontAwesomeIcon icon={faList} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.taskButton} onPress={() => navigation.navigate('Goals')}>
-                    <Text>Goals</Text>
+                    <FontAwesomeIcon icon={faBullseye} />
                 </TouchableOpacity>
             </View>
             <View style={styles.bigTaskContainer}>
                 <TouchableOpacity style={styles.bigTaskButton} onPress={() => navigation.navigate('Flash Card')}>
-                    <Text>Flash Card</Text>
+                    <Text style={{ fontSize: 30, fontWeight: '500' }}>Flash Card</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.bigTaskButton} onPress={() => navigation.navigate('Study Tips')}>
-                    <Text>Study Tips</Text>
+                    <Text style={{ fontSize: 30, fontWeight: '500' }}>Study Tips</Text>
                 </TouchableOpacity>
             </View>
         </View>
